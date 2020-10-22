@@ -34,3 +34,9 @@ open-upload:
 build-go:
 	mv malicious-onbuild-demo malicious-onbuild-demo.old ; \
 	go build .
+
+run:
+	$(PWD)/malicious-onbuild-demo --onbuild_basic
+
+run-fast:
+	$(PWD)/malicious-onbuild-demo -i --onbuild_basic

@@ -14,9 +14,10 @@ func main() {
 	d.Authors = []*cli.Author{{
 		Name: "Andoni Alonso", Email: "andonialonsof@gmail.com",
 	}}
-	d.Setup(pkg.Cleanup)
+	d.Setup(pkg.Setup)
 	d.Cleanup(pkg.Cleanup)
 
-	d.Add(pkg.OnbuildBasic(), "basics", "run the basics of podman demo")
+	d.Add(pkg.OnbuildBasic(), "onbuild_basic", "Explain what is ONBUILD instruction")
+	d.Add(pkg.OnbuildShowEvil(), "show_malicious", "Show onbuild_malicious container")
 	d.Run()
 }
