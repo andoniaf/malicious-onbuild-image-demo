@@ -20,7 +20,7 @@ build-innocent-3:
 	&& cd ../..
 
 server-up:
-	docker run --rm --name=upload_server \
+	docker run -d --rm --name=upload_server \
 		-p 25478:25478 \
 		-v $(PWD)/containers/sftp/upload:/var/root \
 		mayth/simple-upload-server -token patata /var/root
