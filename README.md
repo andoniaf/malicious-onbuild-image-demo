@@ -67,3 +67,9 @@ run                 Run all demo steps
 run-fast            Run all demo steps (without typewritter animation)
 server-up           Start SFTP local server
 ```
+
+---
+### More info
+- [`ONBUILD` docker docs.](https://docs.docker.com/engine/reference/builder/#onbuild)
+- [`ONBUILD` in buildah images.](https://github.com/containers/buildah/blob/master/docs/tutorials/03-on-build.md)
+- [Article from redlock.io that mention malicious `ONBUILD` images.](https://redlock.io/blog/instance-metadata-api-a-modern-day-trojan-horse)
