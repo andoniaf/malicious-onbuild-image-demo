@@ -19,7 +19,8 @@ func main() {
 
 	d.Add(pkg.OnbuildBasic(), "onbuild_basic", "Explain what is ONBUILD instruction")
 	d.Add(pkg.OnbuildShowEvil(), "show_malicious", "Show onbuild_malicious container")
-	d.Add(pkg.OnbuildUseEvil(), "use_malicious", "Use onbuild_malicious container")
+	d.Add(pkg.OnbuildUseEvil(), "use_malicious_1", "Use onbuild_malicious container I")
 	d.Add(pkg.OnbuildWhatHappened(), "what_happened", "What happened using onbuild_malicious container")
+	d.Add(pkg.OnbuildUseEvil_2(), "use_malicious_2", "Use onbuild_malicious container II")
 	d.Run()
 }
