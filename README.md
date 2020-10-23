@@ -1,6 +1,6 @@
 # Malicious ONBUILD demo
 
-> Demo resources to show how `ONBUILD` instruction could be used to build malicious container images.
+> Demo resources to show how `ONBUILD` instruction could be used to build malicious Docker images.
 > <br><br> 
 
 *Go demo binary build with [saschagrunert/demo](https://github.com/saschagrunert/demo) framkework.*
@@ -8,13 +8,13 @@
 ---
 
 ## Demo info
-- Malicious container image:
+- Malicious docker image:
   - `containers/malicious`
 
 - SFTP:
   - Uses `mayth/simple-upload-server` docker image
 
-- Innocent container images:
+- Innocent docker images:
   - `containers/inno`, `containers/inno-2`, `containers/inno-3`
 
 - Go binary:
