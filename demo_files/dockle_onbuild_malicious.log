@@ -1,0 +1,23 @@
+[31mFATAL[0m	- [36mDKL-DI-0005[0m: Clear apt-get caches
+	* Use 'rm -rf /var/lib/apt/lists' after 'apt-get install' : RUN /bin/sh -c apt-get update && apt-get install curl -y --no-install-recommends # buildkit
+[33mWARN[0m	- [36mCIS-DI-0001[0m: Create a user for the container
+	* Last user should not be root
+[33mWARN[0m	- [36mDKL-DI-0006[0m: Avoid latest tag
+	* Avoid 'latest' tag
+[35mINFO[0m	- [36mCIS-DI-0005[0m: Enable Content trust for Docker
+	* export DOCKER_CONTENT_TRUST=1 before docker pull/build
+[35mINFO[0m	- [36mCIS-DI-0006[0m: Add HEALTHCHECK instruction to the container image
+	* not found HEALTHCHECK statement
+[35mINFO[0m	- [36mCIS-DI-0008[0m: Confirm safety of setuid/setgid files
+	* setgid file: usr/bin/chage grwxr-xr-x
+	* setgid file: sbin/unix_chkpwd grwxr-xr-x
+	* setuid file: usr/bin/passwd urwxr-xr-x
+	* setuid file: bin/su urwxr-xr-x
+	* setuid file: usr/bin/gpasswd urwxr-xr-x
+	* setgid file: usr/bin/expiry grwxr-xr-x
+	* setuid file: usr/bin/newgrp urwxr-xr-x
+	* setuid file: bin/umount urwxr-xr-x
+	* setgid file: usr/bin/wall grwxr-xr-x
+	* setuid file: usr/bin/chsh urwxr-xr-x
+	* setuid file: usr/bin/chfn urwxr-xr-x
+	* setuid file: bin/mount urwxr-xr-x

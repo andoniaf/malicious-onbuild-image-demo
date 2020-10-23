@@ -8,6 +8,7 @@ func OnbuildWhatHappened() *Run {
 	r := NewRun(
 		"What did ONBUILD image do?",
 		"Okey, nice joke, WTF did you do.",
+		"",
 	)
 
 	r.Step(S(

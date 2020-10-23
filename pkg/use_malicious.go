@@ -8,6 +8,7 @@ func OnbuildUseEvil() *Run {
 	r := NewRun(
 		"Let's use our badass ONBUILD image",
 		"Now that we know it's safe nothing could go wrong. (ಠ_ಠ)",
+		"",
 	)
 
 	r.Step(S(
@@ -41,7 +42,7 @@ func OnbuildUseEvil() *Run {
 		"Well, let me introduce you my friend `SFTP`,",
 		"for demo purpose let's assume it's in a Russian server instead of local.",
 	), S(
-		"docker ps | grep upload_server",
+		"docker ps | grep russian_sftp_server",
 	))
 
 	r.Step(S(

@@ -20,7 +20,7 @@ build-innocent-3:
 	&& cd ../..
 
 server-up:
-	docker run -d --rm --name=upload_server \
+	docker run -d --name=russian_sftp_server \
 		-p 25478:25478 \
 		-v $(PWD)/containers/sftp/upload:/var/root \
 		mayth/simple-upload-server -token patata /var/root
@@ -35,8 +35,8 @@ build-go:
 	mv malicious-onbuild-demo malicious-onbuild-demo.old ; \
 	go build .
 
-run:
-	$(PWD)/malicious-onbuild-demo --onbuild_basic
+run: build-malicious
+	clear && $(PWD)/malicious-onbuild-demo --all
 
 run-fast:
-	$(PWD)/malicious-onbuild-demo -i --onbuild_basic
+	clear && $(PWD)/malicious-onbuild-demo -i --all

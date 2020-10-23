@@ -8,6 +8,7 @@ func OnbuildBasic() *Run {
 	r := NewRun(
 		"ONBUILD",
 		"What is `ONBUILD` instruction?",
+		"",
 	)
 
 	r.Step(S(
