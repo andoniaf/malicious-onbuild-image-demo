@@ -5,18 +5,18 @@ build-malicious:
 
 build-innocent:
 	cd containers/inno && \
-	docker build --network=host -f Dockerfile.inno -t onbuild_innocent . \
+	docker build --network=host -f Dockerfile.inno -t onbuild_innocent --no-cache . \
 	&& cd ../..
 
 build-innocent-2:
 	cd containers/inno-2 && \
-	docker build --network=host -f Dockerfile.inno -t onbuild_innocent_2 . \
+	docker build --network=host -f Dockerfile.inno -t onbuild_innocent_2 --no-cache . \
 	&& cd ../..
 
 # Build from Dockerhub
 build-innocent-3:
 	cd containers/inno-3 && \
-	docker build --network=host -f Dockerfile.inno -t onbuild_innocent_3 . \
+	docker build --network=host -f Dockerfile.inno -t onbuild_innocent_3 --no-cache . \
 	&& cd ../..
 
 server-up:

@@ -13,7 +13,7 @@ func OnbuildUseEvil() *Run {
 	r.Step(S(
 		"I have here a new innocent docker image that I want to build:",
 	), S(
-		"ls -l containers/inno",
+		"ls -la containers/inno",
 		"&& echo &&",
 		"bat containers/inno/Dockerfile.inno",
 	))
@@ -48,14 +48,15 @@ func OnbuildUseEvil() *Run {
 		"Let's see what's inside...",
 	), S(
 		`cd containers/sftp && \
-		ls -l upload/ && \
+		ls -l upload/ && echo && \
 		tar -xvzf upload/upload.tar.gz && \
-		ls -la app
+		ls -la app && echo && \
+		bat app/{.env,thisshouldntbehere.token}
 		`,
 	))
 
 	r.Step(S(
-		"Oh no...my secret token (╥﹏╥)",
+		"Oh no...my secrets (╥﹏╥)",
 	), nil)
 
 	return r

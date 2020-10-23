@@ -1,1 +1,3 @@
 *.old
+containers/sftp/upload/upload.tar.gz
+containers/sftp/app
