@@ -50,12 +50,12 @@ build-go:
 
 .PHONY: run
 ## Run all demo steps
-run: build-malicious
+run: 
 	clear && $(PWD)/malicious-onbuild-demo --all
 
 .PHONY: run-fast
 ## Run all demo steps (without typewritter animation)
-run-fast: build-malicious
+run-fast: 
 	clear && $(PWD)/malicious-onbuild-demo -i --all
 
 
