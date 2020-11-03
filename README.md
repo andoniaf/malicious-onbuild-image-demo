@@ -73,3 +73,4 @@ server-up           Start SFTP local server
 - [`ONBUILD` docker docs.](https://docs.docker.com/engine/reference/builder/#onbuild)
 - [`ONBUILD` in buildah images.](https://github.com/containers/buildah/blob/master/docs/tutorials/03-on-build.md)
 - [Article from redlock.io that mention malicious `ONBUILD` images.](https://redlock.io/blog/instance-metadata-api-a-modern-day-trojan-horse)
+- [[ES]Talk: Docker Layers, Dive In @ HacknightVLC](https://www.youtube.com/watch?v=ieo--VcxIXg)
